@@ -1,7 +1,28 @@
 [
   {
-    "RuleName": "abc",
-    "ip": "10.0.0.3",
-    "id": "343043"
+    "source_ip": "any",
+    "destination_ip": "any",
+    "source_port": "any",
+    "destination_port": "any",
+    "protocol": "ICMP",
+    "state": "ICMP reply wait",
+    "action": "allow",
+    "log_action": false,
+    "rate_limit": 11,
+    "limit_window": 22,
+    "id": "674100"
+  },
+  {
+    "source_ip": "10.0.0.9",
+    "destination_ip": "10.0.0.10",
+    "source_port": "8888",
+    "destination_port": "8080",
+    "protocol": "TCP",
+    "state": "SYN_RECEIVED",
+    "action": "deny",
+    "log_action": true,
+    "rate_limit": 2,
+    "limit_window": 2,
+    "id": "710574"
   }
 ]
