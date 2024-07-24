@@ -8,6 +8,6 @@ logsRouter.get('/updated-logs', logsController.getUpdatedLogs);
 
 
 // PUT
-// logsRouter.post('/add-log', logsController.add_log);
+// git rm --cached rulebase-stateful-frontend
 
 module.exports = { logsRouter };
