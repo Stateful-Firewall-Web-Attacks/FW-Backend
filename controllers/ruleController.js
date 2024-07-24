@@ -63,10 +63,10 @@ const addOrUpdateIp = (req, res) => {
   // Helper functions to validate fields
   const isValidIpOrAny = (ip) => ip === 'any' || /^(\d{1,3}\.){3}\d{1,3}$/.test(ip);
   const isValidPortOrAny = (port) => port === 'any' || /^\d+$/.test(port);
-  const isValidProtocol = (proto) => ['UDP', 'TCP', 'ICMP'].includes(proto);
+  const isValidProtocol = (proto) => ['ARP', 'TCP', 'ICMP'].includes(proto);
   const validStates = [
     'SYN_SENT', 'SYN_RECEIVED', 'ESTABLISHED', 'FIN_WAIT', 'CLOSED',
-    'ICMP echo', 'ICMP reply wait', 'ARP request', 'ARP reply'
+    'ICMP echo', 'ICMP reply wait', 'ARP request', 'ARP reply', 'any'
   ];
   const isValidState = (st) => validStates.includes(st);
   const isValidAction = (act) => ['allow', 'deny'].includes(act);
