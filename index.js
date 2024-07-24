@@ -16,16 +16,15 @@ server.use(bodyParser.json());
 server.use(cors());
 
 server.use(express.json());
-server.use(express.static(path.join(__dirname,'/../build')));
-
-server.get("*", (req, res)=> {
-     res.sendFile(path.join(__dirname+'/../build/index.html'));
-});
-
+server.use(express.static(path.join(__dirname, 'frontend/build')));
 
 server.use('/api-rule', ruleRouter);
 server.use('/api-settings', settingsRouter);
 server.use('/api-logs', logsRouter);
+
+server.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
 
 server.use((req, res) => {
     res.status(400).send('Something is broken!');
