@@ -7,7 +7,7 @@ logsRouter.get('/initial-logs', logsController.initialLogs);
 logsRouter.get('/updated-logs', logsController.getUpdatedLogs);
 
 
-// // PUT
-// logsRouter.put('/settings', logsController.updateSettings);
+// PUT
+// logsRouter.post('/add-log', logsController.add_log);
 
 module.exports = { logsRouter };
